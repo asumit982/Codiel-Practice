@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
-const port = 8000;
+const port = 8080;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const passport = require('passport');
+const passportLocal = require('./config/passport-local-strategy');
+
 
 app.use(express.urlencoded());
 
